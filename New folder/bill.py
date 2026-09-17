@@ -5,15 +5,15 @@ print()
 print("==============================================================")
 print()
 
-user = int(input(" choose your designation \n 1: STUDENT | 2: FACULTY "))
+user = int(input(" Select User category ( 1:Student,2:Faculty/Staff ) "))
 
 if user == 1:
 
-    name = input(" enter your name  ")
+    
 
-    course = input("enter course details\n A= UNDERGRADUATE | B = POSTGRADUATE ")
+    course = input("Enter Sub-Category(UG/PG) :")
 
-    CGPA = float(input(" enter CGPA "))
+    CGPA = float(input(" Enter Student CGPA(0.0-10.0): "))
 
 
     if CGPA < 0.0 or CGPA > 10.0:
@@ -21,13 +21,13 @@ if user == 1:
         exit()
 
     Parking_vehicle = input(
-        " enter your vehicle type \n 1: TWO WHEELER | 2: FOUR WHEELER | 0: NONE "
+        " Select parking Permit(0:None, 2:Two Wheeler, 4:Four Wheeler) "
     )
 
-    if course == "A":
+    if course == "UG":
         Base_Access_Pass_Fess = 500
 
-    elif course == "B":
+    elif course == "PG":
         Base_Access_Pass_Fess = 350
 
     else:
@@ -50,10 +50,10 @@ if user == 1:
     Parking_Fee = 0
     Peak_Surcharge = 0
 
-    if Parking_vehicle == "1":
+    if Parking_vehicle == "2":
         Parking_Fee = 200
 
-    elif Parking_vehicle == "2":
+    elif Parking_vehicle == "4":
         Parking_Fee = 600
         Peak_Surcharge = 150
 
@@ -80,10 +80,7 @@ elif user == 2:
         print("[ERROR]: Years of Service cannot be negative")
         exit()
 
-    Parking_Vehicle = input(
-        " enter your vehicle type \n 1: TWO WHEELER | 2: FOUR WHEELER | 0: NONE "
-    )
-
+    Parking_Vehicle = input( " Select parking Permit(0:none, 2:Two Wheeler, 4:Four Wheeler) ")
     if Resident_Type == "1":
         Base_Access_Pass_Fess = 800
 
@@ -127,7 +124,7 @@ else:
     print("Wrong Input")
     exit()
 
-electricity_unit = int(input(" enter your electricity unit consumption "))
+electricity_unit = int(input(" Enter Monthly Electricity  Consumption: "))
 
 if electricity_unit < 0:
     print("[ERROR]: Electricity units cannot be negative")
